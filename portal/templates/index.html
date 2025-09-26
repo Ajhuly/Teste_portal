@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="p-5 mb-4 bg-light rounded-3" style="background-image: url('{{ url_for('static', filename='images/background.jpg') }}'); background-size: cover; height: 300px;">
+    </div>
+
+<section class="my-5">
+    <h2>Acervos</h2>
+    <form action="/buscar" method="get">
+        <div class="input-group input-group-lg">
+            <span class="input-group-text">🔎</span>
+            <input type="text" class="form-control" name="query" placeholder="Busque por artigos, livros, teses, autores...">
+            <button class="btn btn-primary" type="submit">BUSCAR</button>
+        </div>
+    </form>
+</section>
+
+<section class="my-5">
+    <h2>Serviços em Destaque</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="my-3">📚</h3>
+                    <h5 class="card-title">Memória por Imagem</h5>
+                    <p class="card-text">Projeto que conta a história do CBPF por meio de imagens.</p>
+                    <a href="/servicos/treinamentos" class="btn btn-outline-primary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="my-3">💻</h3>
+                    <h5 class="card-title">Eventos</h5>
+                    <p class="card-text">Reveja tudo o que aconteceu nos eventos do NIB.</p>
+                    <a href="/repositorio" class="btn btn-outline-primary">Acessar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="my-3">📄</h3>
+                    <h5 class="card-title">Espaços</h5>
+                    <p class="card-text">Um pouco dos vários espaços do NIB: biblioteca, salão de convivência, Lab3I.</p>
+                    <a href="/servicos/normas" class="btn btn-outline-primary">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
