@@ -17,10 +17,89 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2">Sobre</a></li>
-                    <li><a href="#" class="nav-link px-2">Acervo</a></li>
-                    <li><a href="#" class="nav-link px-2">Publicações Internas</a></li>
-                    <li><a href="#" class="nav-link px-2">História</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownSobre" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SOBRE
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownSobre">
+                            <li><a class="dropdown-item" href="{{ url_for('quem_somos') }}">QUEM SOMOS</a></li>
+                            <li><a class="dropdown-item" href="/sobre/espaco">ESPAÇO</a></li>
+                            <li><a class="dropdown-item" href="/sobre/contato">CONTATO</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownAcervo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ACERVO & PUBLICAÇÕES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownAcervo">
+                            <li><a class="dropdown-item" href="/acervo/busca">BUSCA NO ACERVO</a></li>
+                            <li><a class="dropdown-item" href="/publicacoes/teses">TESES & DISSERTAÇÕES</a></li>
+                            <li><a class="dropdown-item" href="/publicacoes/instituicao">PUBLICAÇÕES DA INSTITUIÇÃO</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownHistoria" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            HISTÓRIA & CULTURA
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownHistoria">
+                            <li><a class="dropdown-item" href="/historia/memoria-imagem">MEMÓRIA POR IMAGEM</a></li>
+                            <li><a class="dropdown-item" href="/historia/calendario-ciencia">CALENDÁRIO DA CIÊNCIA</a></li>
+                            
+                            <li class="dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="dropdownArtigos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ARTIGOS E FILMES
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownArtigos">
+                                    <li><a class="dropdown-item" href="/historia/artigos/einstein">EINSTEIN</a></li>
+                                    <li><a class="dropdown-item" href="/historia/artigos/feynman">FEYNMAN</a></li>
+                                    <li><a class="dropdown-item" href="/historia/filmes">FILMES</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="/historia/eventos">EVENTOS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownCiencia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CIÊNCIA ABERTA
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownCiencia">
+                            <li><a class="dropdown-item" href="/ciencia-aberta/apresentacao">APRESENTAÇÃO</a></li>
+                            <li><a class="dropdown-item" href="/ciencia-aberta/dataverse">DATAVERSE CBPF</a></li>
+                            <li><a class="dropdown-item" href="/ciencia-aberta/iniciativas">INICIATIVAS</a></li>
+                            <li><a class="dropdown-item" href="/ciencia-aberta/documentacao">DOCUMENTAÇÃO</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownNri" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            NRI
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownNri">
+                            <li><a class="dropdown-item" href="/nri/atividades">ATIVIDADES</a></li>
+                            <li><a class="dropdown-item" href="/nri/tcg">TCG</a></li>
+                            <li><a class="dropdown-item" href="/nri/dados-comprobatorios">DADOS COMPROBATÓRIOS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownLab3i" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            LAB3I
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownLab3i">
+                            <li><a class="dropdown-item" href="/lab3i/laboratorio">LABORATÓRIO</a></li>
+                            <li><a class="dropdown-item" href="/lab3i/participacao-eventos">PARTICIPAÇÃO EM EVENTOS</a></li>
+                            <li><a class="dropdown-item" href="/lab3i/monitoramento-iot">MONITORAMENTO IOT</a></li>
+                            <li><a class="dropdown-item" href="/lab3i/maddar">MADDAR</a></li>
+                            <li><a class="dropdown-item" href="/lab3i/integracoes-migracao">INTEGRAÇÕES & MIGRAÇÃO</a></li>
+                            <li><a class="dropdown-item" href="/lab3i/formacao-cientifica">FORMAÇÃO CIENTÍFICA</a></li>
+                            <li><a class="dropdown-item" href="/lab3i/visita-virtual">VISITA VIRTUAL</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
                 <a href="https://www.cbpf.br/" target="_blank" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
                    <img src="{{ url_for('static', filename='images/logo_cbpf_white.png') }}" alt="Logo CBPF" height="40">
@@ -37,5 +116,6 @@
     {% include 'footer.html' %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
