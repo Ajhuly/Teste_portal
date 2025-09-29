@@ -41,14 +41,14 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownHistoria" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownHistoria" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                             HISTÓRIA & CULTURA
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownHistoria">
                             <li><a class="dropdown-item" href="{{ url_for('historia_memoria_imagem') }}">MEMÓRIA POR IMAGEM</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('historia_calendario_ciencia') }}">CALENDÁRIO DA CIÊNCIA</a></li>
                             
-                            <li class="nav-item dropdown">
+                            <li class="dropend">
                                 <a class="dropdown-item dropdown-toggle" href="#" id="dropdownArtigos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     ARTIGOS E FILMES
                                 </a>
