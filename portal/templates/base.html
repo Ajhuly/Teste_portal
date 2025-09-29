@@ -24,8 +24,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownSobre">
                             <li><a class="dropdown-item" href="{{ url_for('quem_somos') }}">QUEM SOMOS</a></li>
-                            <li><a class="dropdown-item" href="/sobre/espaco">ESPAÇO</a></li>
-                            <li><a class="dropdown-item" href="/sobre/contato">CONTATO</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('sobre_espaco') }}">ESPAÇO</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('sobre_contato') }}">CONTATO</a></li>
                         </ul>
                     </li>
 
@@ -34,9 +34,9 @@
                             ACERVO & PUBLICAÇÕES
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownAcervo">
-                            <li><a class="dropdown-item" href="/acervo/busca">BUSCA NO ACERVO</a></li>
-                            <li><a class="dropdown-item" href="/publicacoes/teses">TESES & DISSERTAÇÕES</a></li>
-                            <li><a class="dropdown-item" href="/publicacoes/instituicao">PUBLICAÇÕES DA INSTITUIÇÃO</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('acervo_busca') }}">BUSCA NO ACERVO</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('publicacoes_teses') }}">TESES & DISSERTAÇÕES</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('publicacoes_instituicao') }}">PUBLICAÇÕES DA INSTITUIÇÃO</a></li>
                         </ul>
                     </li>
 
@@ -45,20 +45,20 @@
                             HISTÓRIA & CULTURA
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownHistoria">
-                            <li><a class="dropdown-item" href="/historia/memoria-imagem">MEMÓRIA POR IMAGEM</a></li>
-                            <li><a class="dropdown-item" href="/historia/calendario-ciencia">CALENDÁRIO DA CIÊNCIA</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('historia_memoria_imagem') }}">MEMÓRIA POR IMAGEM</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('historia_calendario_ciencia') }}">CALENDÁRIO DA CIÊNCIA</a></li>
                             
                             <li class="dropend">
                                 <a class="dropdown-item dropdown-toggle" href="#" id="dropdownArtigos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     ARTIGOS E FILMES
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownArtigos">
-                                    <li><a class="dropdown-item" href="/historia/artigos/einstein">EINSTEIN</a></li>
-                                    <li><a class="dropdown-item" href="/historia/artigos/feynman">FEYNMAN</a></li>
-                                    <li><a class="dropdown-item" href="/historia/filmes">FILMES</a></li>
+                                    <li><a class="dropdown-item" href="{{ url_for('historia_artigos_einstein') }}">EINSTEIN</a></li>
+                                    <li><a class="dropdown-item" href="{{ url_for('historia_artigos_feynman') }}">FEYNMAN</a></li>
+                                    <li><a class="dropdown-item" href="{{ url_for('historia_filmes') }}">FILMES</a></li>
                                 </ul>
                             </li>
-                            <li><a class="dropdown-item" href="/historia/eventos">EVENTOS</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('historia_eventos') }}">EVENTOS</a></li>
                         </ul>
                     </li>
 
@@ -67,10 +67,10 @@
                             CIÊNCIA ABERTA
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownCiencia">
-                            <li><a class="dropdown-item" href="/ciencia-aberta/apresentacao">APRESENTAÇÃO</a></li>
-                            <li><a class="dropdown-item" href="/ciencia-aberta/dataverse">DATAVERSE CBPF</a></li>
-                            <li><a class="dropdown-item" href="/ciencia-aberta/iniciativas">INICIATIVAS</a></li>
-                            <li><a class="dropdown-item" href="/ciencia-aberta/documentacao">DOCUMENTAÇÃO</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('ciencia_aberta_apresentacao') }}">APRESENTAÇÃO</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('ciencia_aberta_dataverse') }}">DATAVERSE CBPF</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('ciencia_aberta_iniciativas') }}">INICIATIVAS</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('ciencia_aberta_documentacao') }}">DOCUMENTAÇÃO</a></li>
                         </ul>
                     </li>
 
@@ -79,9 +79,9 @@
                             NRI
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownNri">
-                            <li><a class="dropdown-item" href="/nri/atividades">ATIVIDADES</a></li>
-                            <li><a class="dropdown-item" href="/nri/tcg">TCG</a></li>
-                            <li><a class="dropdown-item" href="/nri/dados-comprobatorios">DADOS COMPROBATÓRIOS</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('nri_atividades') }}">ATIVIDADES</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('nri_tcg') }}">TCG</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('nri_dados_comprobatorios') }}">DADOS COMPROBATÓRIOS</a></li>
                         </ul>
                     </li>
 
@@ -90,13 +90,13 @@
                             LAB3I
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownLab3i">
-                            <li><a class="dropdown-item" href="/lab3i/laboratorio">LABORATÓRIO</a></li>
-                            <li><a class="dropdown-item" href="/lab3i/participacao-eventos">PARTICIPAÇÃO EM EVENTOS</a></li>
-                            <li><a class="dropdown-item" href="/lab3i/monitoramento-iot">MONITORAMENTO IOT</a></li>
-                            <li><a class="dropdown-item" href="/lab3i/maddar">MADDAR</a></li>
-                            <li><a class="dropdown-item" href="/lab3i/integracoes-migracao">INTEGRAÇÕES & MIGRAÇÃO</a></li>
-                            <li><a class="dropdown-item" href="/lab3i/formacao-cientifica">FORMAÇÃO CIENTÍFICA</a></li>
-                            <li><a class="dropdown-item" href="/lab3i/visita-virtual">VISITA VIRTUAL</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lab3i_laboratorio') }}">LABORATÓRIO</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lab3i_participacao_eventos') }}">PARTICIPAÇÃO EM EVENTOS</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lab3i_monitoramento_iot') }}">MONITORAMENTO IOT</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lab3i_maddar') }}">MADDAR</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lab3i_integracoes_migracao') }}">INTEGRAÇÕES & MIGRAÇÃO</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lab3i_formacao_cientifica') }}">FORMAÇÃO CIENTÍFICA</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lab3i_visita_virtual') }}">VISITA VIRTUAL</a></li>
                         </ul>
                     </li>
 
