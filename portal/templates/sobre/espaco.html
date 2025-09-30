@@ -1,4 +1,101 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Espaço</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="mb-4">Espaços</h1>
+            <p class="lead mb-5">Circule pelo ambiente do NIB e visite nossas instalações. Seja bem-vindo!</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Card para Ciência & Sociedade -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/sobre/img_espaco/convivencia.jpg') }}" class="card-img-top" alt="Ciência & Sociedade">
+                <div class="card-body">
+                    <h5 class="card-title">Ciência & Sociedade</h5>
+                    <p class="card-text">Espaço social dedicado a troca de ideias e eventos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card para Referência -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/sobre/img_espaco/referencia.jpg') }}" class="card-img-top" alt="Referência">
+                <div class="card-body">
+                    <h5 class="card-title">Referência</h5>
+                    <p class="card-text">Onde acontece o primeiro contato da clientela com o NIB. Oferece orientação sobre o acesso às instalações, à equipe, às bases de dados, ao acervo e empréstimo de livros.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card para Salão de Exposições -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/sobre/img_espaco/exposicao.jpg') }}" class="card-img-top" alt="Salão de Exposições">
+                <div class="card-body">
+                    <h5 class="card-title">Salão de Exposições</h5>
+                    <p class="card-text">Espaço dinâmico e versátil para expor à comunidade temas de cultura e história em C&T, imagens e artefatos, obras raras e relevantes do acervo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card para Laboratório de Restauro -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/sobre/img_espaco/labrest.jpg') }}" class="card-img-top" alt="Laboratório de Restauro">
+                <div class="card-body">
+                    <h5 class="card-title">Laboratório de Restauro</h5>
+                    <p class="card-text">Laboratório equipado para atender às necessidades de higienização, encadernação e restauração de publicações impressas da biblioteca, principalmente obras antigas e raras.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card para Acervo de Livros -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/sobre/img_espaco/acervo.jpg') }}" class="card-img-top" alt="Acervo de Livros">
+                <div class="card-body">
+                    <h5 class="card-title">Acervo de Livros</h5>
+                    <p class="card-text">Área onde está o acervo impresso da biblioteca, com 45 estantes, sinalizado por número de classificação. O acesso às estantes é liberado à comunidade.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card para Acervo de Periódicos -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/sobre/img_espaco/periodicos.jpg') }}" class="card-img-top" alt="Acervo de Periódicos">
+                <div class="card-body">
+                    <h5 class="card-title">Acervo de Periódicos</h5>
+                    <p class="card-text">Espaço de livre acesso à comunidade, com 44 estantes, contendo as coleções impressas do acervo a partir de 1980, organizadas alfabeticamente por título.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card para Acervo de Periódicos Antigos -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/sobre/img_espaco/antigos.jpg') }}" class="card-img-top" alt="Acervo de Periódicos Antigos">
+                <div class="card-body">
+                    <h5 class="card-title">Acervo de Periódicos Antigos</h5>
+                    <p class="card-text">Sala no andar térreo do CBPF, onde estão as coleções anteriores aos anos 1980, com 22 estantes sinalizadas alfabeticamente. Contem coleções centenárias, de valor histórico em C&T.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card para Lab3I -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/sobre/img_espaco/lab3i.jpg') }}" class="card-img-top" alt="Lab3I">
+                <div class="card-body">
+                    <h5 class="card-title">Lab3I</h5>
+                    <p class="card-text">Laboratório de P&D em TI, equipado com computadores e acessórios. Local onde se ministra cursos, e se desenvolve, implanta e atualiza sistemas de informática para o NIB e para setores do CBPF.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
