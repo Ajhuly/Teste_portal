@@ -21,31 +21,31 @@
     <div class="row text-center">
         <div class="col-md-4 d-flex">
             <div class="card shadow-sm h-100">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                     <h3 class="my-3">📚</h3>
                     <h5 class="card-title">Memória por Imagem</h5>
                     <p class="card-text">Projeto que conta a história do CBPF por meio de imagens.</p>
-                    <a href="/servicos/treinamentos" class="btn btn-outline-primary">Saiba Mais</a>
+                    <a href="{{ url_for('historia_memoria_imagem') }}" class="btn btn-outline-primary mt-auto">Saiba Mais</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4 d-flex">
             <div class="card shadow-sm h-100">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                     <h3 class="my-3">💻</h3>
                     <h5 class="card-title">Eventos</h5>
                     <p class="card-text">Reveja tudo o que aconteceu nos eventos do NIB.</p>
-                    <a href="/repositorio" class="btn btn-outline-primary">Acessar</a>
+                    <a href="{{ url_for('historia_eventos') }}" class="btn btn-outline-primary mt-auto">Acessar</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4 d-flex">
             <div class="card shadow-sm h-100">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                     <h3 class="my-3">📄</h3>
                     <h5 class="card-title">Espaços</h5>
                     <p class="card-text">Um pouco dos vários espaços do NIB: biblioteca, salão de convivência, Lab3I.</p>
-                    <a href="/servicos/normas" class="btn btn-outline-primary">Consultar</a>
+                    <a href="{{ url_for('sobre_espaco') }}" class="btn btn-outline-primary mt-auto">Consultar</a>
                 </div>
             </div>
         </div>
