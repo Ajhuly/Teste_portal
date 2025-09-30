@@ -97,7 +97,17 @@ h2 {
 }
 
 
-/* 6. ESTILOS DO RODAPÉ (FOOTER) */
+/* 6. ESTILOS DE COMPONENTES DE PÁGINA (EX: BANNER) */
+
+.hero-banner {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+}
+
+
+/* 7. ESTILOS DO RODAPÉ (FOOTER) */
 
 footer {
     background-color: var(--cor-secundaria-cbpf); /* Fundo cinza bem claro para destacar o rodapé */
