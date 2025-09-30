@@ -1,6 +1,7 @@
 # rotas de links
-from flask import render_template, url_for
+from flask import render_template, url_for, flash, redirect
 from portal import app
+from portal.forms import ContatoForm
 
 @app.route('/')
 def home():
@@ -15,9 +16,16 @@ def quem_somos():
 def sobre_espaco():
     return render_template('sobre/espaco.html')
 
-@app.route('/sobre/contato')
+@app.route('/sobre/contato', methods=['GET', 'POST'])
 def sobre_contato():
-    return render_template('sobre/contato.html')
+    form = ContatoForm()
+    if form.validate_on_submit():
+        # Aqui, você poderia adicionar a lógica para enviar o e-mail
+        # ou salvar os dados em um banco de dados.
+        # Por enquanto, vamos apenas exibir uma mensagem de sucesso.
+        flash('Sua mensagem foi enviada com sucesso!', 'success')
+        return redirect(url_for('sobre_contato'))
+    return render_template('sobre/contato.html', form=form)
 
 # Rotas para a seção 'Acervo & Publicações'
 @app.route('/acervo/busca')
