@@ -1,56 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <h1>Fale Conosco</h1>
-
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        <div class="form-group">
-            {{ form.nome.label(class="form-control-label") }}
-            {{ form.nome(class="form-control") }}
-            {% if form.nome.errors %}
-                <div class="text-danger">
-                    {% for error in form.nome.errors %}
-                        <span>{{ error }}</span>
-                    {% endfor %}
-                </div>
-            {% endif %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="mb-5">Contato</h1>
         </div>
-        <div class="form-group">
-            {{ form.email.label(class="form-control-label") }}
-            {{ form.email(class="form-control") }}
-            {% if form.email.errors %}
-                <div class="text-danger">
-                    {% for error in form.email.errors %}
-                        <span>{{ error }}</span>
-                    {% endfor %}
-                </div>
-            {% endif %}
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-4">
+                <h5>Referência</h5>
+                <p><i class="fas fa-phone mr-2"></i>+55 21 2141-7242</p>
+            </div>
+            <div class="mb-4">
+                <h5>CBPF</h5>
+                <p><i class="fas fa-phone mr-2"></i>+55 21 2141-7100</p>
+            </div>
+            <div class="mb-4">
+                <h5>Funcionamento</h5>
+                <p><i class="fas fa-clock mr-2"></i>De segunda a sexta, das 8h30 às 17h30.</p>
+            </div>
+            <div class="mb-4">
+                <h5>E-mail</h5>
+                <p><i class="fas fa-envelope mr-2"></i><a href="mailto:biblioteca@cbpf.br">biblioteca@cbpf.br</a></p>
+            </div>
+            <div class="mb-4">
+                <h5>Endereço</h5>
+                <p><i class="fas fa-map-marker-alt mr-2"></i>Rua Dr. Xavier Sigaud, 150 - 4º andar - Urca<br>Rio de Janeiro - RJ | CEP: 22290-180 - Brasil</p>
+            </div>
         </div>
-        <div class="form-group">
-            {{ form.mensagem.label(class="form-control-label") }}
-            {{ form.mensagem(class="form-control", rows=5) }}
-            {% if form.mensagem.errors %}
-                <div class="text-danger">
-                    {% for error in form.mensagem.errors %}
-                        <span>{{ error }}</span>
-                    {% endfor %}
-                </div>
-            {% endif %}
+        <div class="col-md-6">
+            <h5>Localização</h5>
+            <div class="embed-responsive embed-responsive-16by9 shadow-sm rounded">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2184.496590143239!2d-43.17462900951759!3d-22.954988413519754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ff81051b73f%3A0x4570cd1fa55b72e7!2sCBPF+-+Centro+Brasileiro+de+Pesquisas+F%C3%ADsicas!5e0!3m2!1spt-BR!2sbr!4v1533128504195" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
-        <div class="form-group">
-            {{ form.enviar(class="btn btn-primary") }}
-        </div>
-    </form>
+    </div>
 </div>
 {% endblock %}

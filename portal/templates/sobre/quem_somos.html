@@ -1,4 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Quem Somos</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center mb-4">Núcleo de Informação C&T e Biblioteca - NIB</h1>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-7">
+            <p class="lead">
+                O Núcleo de Informação C&T e Biblioteca – NIB foi criado em 2017 para prestar serviços de informação ao CBPF, à comunidade científica e ao público em geral sobre física e assuntos correlatos. Agregada a esse núcleo, a biblioteca do CBPF, num modelo versátil de prestação de serviços, é uma preciosa fonte de informação com mais de 33 mil itens em acervo atualizado e histórico e quase 1000 coleções de periódicos. Também preciosa é a área de publicações do NIB, que produz sem interrupção as revistas do CBPF desde 1952, divulgando ciência, cultura e história.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='images/sobre/img_quem_somos/quem-somos-high.png') }}" class="img-fluid rounded shadow" alt="Infográfico da história da biblioteca">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='images/sobre/img_quem_somos/quem-somos.jpg') }}" class="img-fluid rounded shadow" alt="Foto do espaço da biblioteca">
+        </div>
+        <div class="col-md-7">
+            <p class="lead">
+                A prestação de serviços no NIB atualmente, segue 6 linhas de ação interrelacionadas: Acervo, Acesso a base de dados, Documentos Institucionais, Divulgação em C&T, Formação Científica e Pesquisa & Desenvolvimento. Essas linhas de ação estão conectadas pelo Laboratório de Informação e Instrumentação IoT - Lab3I, com recursos tecnológicos e humanos para desenvolver sistemas de informação, de monitoramento e controle.
+            </p>
+        </div>
+    </div>
+</div>
 {% endblock %}
